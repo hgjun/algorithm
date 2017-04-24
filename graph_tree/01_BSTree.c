@@ -363,7 +363,7 @@ void getPostorder(int *preorder, int *inorder, int size)
 
 int main()
 {
-	FILE *fp = fopen("02_BSTree_input.txt", "r");
+	FILE *fp = fopen("01_BSTree_input.txt", "r");
 
 	int  i;
 	char buf1[1024], buf2[1024];

@@ -182,7 +182,7 @@ int  precedence(char op)
 int main()
 {
 	int i;
-	FILE *fp = fopen("03_treeOrder_input.txt", "r");
+	FILE *fp = fopen("02_treeOrder_input.txt", "r");
 	int nLoops;
 	char tmp[1024];
 

@@ -9,7 +9,7 @@
 int main(void)
 {
 	int i;
-	freopen("04_graphSearch_input.txt", "r", stdin);
+	freopen("03_graphSearch_input.txt", "r", stdin);
 	//setbuf(stdout, NULL);
 	int vertexSize, edgeSize;
 	scanf("%d %d", &vertexSize, &edgeSize);
@@ -42,7 +42,7 @@ int main(void)
 	PRT("\n----------------------------------------------------\n");
 	PRT("DFS: Tree edge, forward edge, back edge, and cross edge");
 	PRT("\n----------------------------------------------------\n");
-	freopen("04_graphSearch_input2.txt", "r", stdin);
+	freopen("03_graphSearch_input2.txt", "r", stdin);
 	scanf("%d %d", &vertexSize, &edgeSize);
 
 	graphInit(vertexSize);
