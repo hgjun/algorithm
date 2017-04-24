@@ -39,8 +39,8 @@
                                                                        dest[i_][j_] = source[i_][j_];\
                                                            } while (0)
 #define TR_MATRIX(dest, source, row, col)                  do {\
-														       int i_, j_;\
-															   for (i_ = (row); i_ >= 0; i_--)\
+                                                               int i_, j_;\
+                                                               for (i_ = (row); i_ >= 0; i_--)\
                                                                    for (j_ = (col); j_ >= 0; j_--)\
                                                                        dest[j_][i_] = source[i_][j_];\
                                                            } while (0)
