@@ -22,6 +22,77 @@ void showResult()
 	PRTLN;
 }
 
+
+/*
+
+
+void selectionSort(int *arr, int size)
+{
+	PRT("%s: \n", __FUNCTION__);
+}
+
+void bubbleSort(int *arr, int size)
+{
+	PRT("%s: \n", __FUNCTION__);
+}
+
+void insertionSort(int *arr, int size)
+{
+	PRT("%s: \n", __FUNCTION__);
+}
+
+void countingSort(int *arr, int size, int maxK)
+{
+	PRT("%s: \n", __FUNCTION__);
+	// maxK: max number of the dataset
+	
+}
+
+void merge(int *arr, int head, int mid, int tail)
+{
+
+}
+
+void mergeSort(int *arr, int head, int tail)
+{
+
+}
+
+int partition(int *arr, int head, int tail)
+{
+
+}
+
+void quickSort(int *arr, int head, int tail)
+{
+
+}
+
+int quickSelection(int *arr, int size, int k)
+{
+	PRT("%s: \n", __FUNCTION__);
+}
+
+
+void heapify(int *arr, int root, int size)
+{
+
+}
+
+void buildHeap(int *arr, int size)
+{
+
+}
+
+void heapSort(int *arr, int size)
+{
+	PRT("%s: \n", __FUNCTION__);
+}
+
+
+*/
+
+
 void selectionSort(int *arr, int size)
 {
 	PRT("%s: \n", __FUNCTION__);
