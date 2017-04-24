@@ -43,13 +43,6 @@ void addForwardEdge(int u, int v);
 void addBackEdge(int u, int v);
 void addCrossEdge(int u, int v);
 
-void findCutVertex(int start);
-void visitFindCutVertex(int u, bool isRoot);
-
-void findBridge(int start);
-void visitFindBridge(int u, int v);
-
-
 void gsDisplay()
 {
 	int u, v;
