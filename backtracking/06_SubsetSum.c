@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include "macrofunctions.h"
 
-
+// http://www.geeksforgeeks.org/backttracking-set-4-subset-sum/
 #define ARRAYSIZE(a) (sizeof(a))/(sizeof(a[0]))
 
 static int total_nodes;
