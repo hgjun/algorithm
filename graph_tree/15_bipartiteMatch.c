@@ -30,6 +30,7 @@ int  bipartiteMatch(void);
 bool bipartiteVisitDFS(int u);
 
 /*
+
 bool isConnected(int u, int v)
 {
 }
@@ -45,6 +46,7 @@ int  bipartiteMatch    (void)
 bool bipartiteVisitDFS (int u)
 {
 }
+
 */
 
 bool isConnected(int u, int v) {
@@ -82,9 +84,6 @@ void bipartiteDisplay(void)
 	printf("\n");
 }
 
-
-
-
 int bipartiteMatch(void)
 {
 	int nMatches = 0;
@@ -121,8 +120,6 @@ bool bipartiteVisitDFS(int u)
 	}
 	return false;
 }
-
-
 
 int main(void)
 {
