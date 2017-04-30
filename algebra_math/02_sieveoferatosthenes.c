@@ -4,8 +4,8 @@
 #include "macrofunctions.h"
 
 // Sieve of Eratosthenes
-bool num[101];
-unsigned int primeNum[100];
+bool num[128];
+unsigned int primeNum[128];
 
 int main()
 {
