@@ -17,6 +17,11 @@ int main(void)
 {
 	int i, j;
 	printf("%s %d %s\n", __FUNCTION__, __LINE__, __FILE__);
+	
+	printf("2^5  = %d\n", 1 << 5 ); // 32
+	printf("2^14 = %d\n", 1 << 14 ); // 16384
+	printf("2^17 = %d\n", 1 << 17 ); // 131072
+	
 	/*
 	FILE *fp = fopen("input.txt", "r");
 	FILE *fw = fopwn("output.txt", "w");
