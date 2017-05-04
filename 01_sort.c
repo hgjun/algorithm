@@ -131,11 +131,11 @@ void insertionSort(int *arr, int size)
 			if (arr[j] > newItem) {
 				arr[j + 1] = arr[j];
 			}
-			else {
-				arr[j + 1] = newItem;
+			else {				
 				break;
 			}
 		}
+		arr[j + 1] = newItem;
 	}
 }
 
