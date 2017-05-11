@@ -77,7 +77,7 @@ void kmp(char *str, char *pattern, int *pi)
 
 int main()
 {
-	freopen("20_kmp.txt", "r", stdin);
+	freopen("02_kmp_input.txt", "r", stdin);
 	char pattern[1024];
 	char str[1024];
 	int pi[1024];
