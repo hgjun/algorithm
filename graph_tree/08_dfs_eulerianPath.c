@@ -26,7 +26,7 @@ void eulerCircuit(int start){
 			eg.adjMat[i][j] = g.adjMat[i][j];
 		}
 	}
-	circuitSize = 1;
+	circuitSize = 0;
 	visitEulerCircuit(start);
 	PRTLN; PRTLN;
 	FORDEC(i, circuitSize, 1) {
@@ -46,7 +46,7 @@ void visitEulerCircuit(int u)
 		}
 	}
 
-	circuit[circuitSize++] = u;
+	circuit[++circuitSize] = u;
 }
 
 int main(void)
