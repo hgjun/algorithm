@@ -6,7 +6,8 @@
 
 void palindrome(char *str, int begin, int end)
 {
-	int mid = begin + (end - begin + 1) / 2;
+	//int mid = begin + (end - begin + 1) / 2;
+	int mid = (begin + end + 1) / 2;
 	int i = begin, j = end;
 
 	while (i < mid) {
