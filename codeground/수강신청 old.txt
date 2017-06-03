@@ -1,0 +1,109 @@
+#include <stdio.h>
+
+#define PRT                              printf
+#define PRTD(n)                          printf("%-3d", (n))
+#define PRTLN                            printf("\n")
+
+#define FOR(i, n)                        for (i = 1; i <= (n); i++)
+#define FORFROM(i, m, n)                 for (i = (m); i <= (n); i++)
+#define FORDEC(i, m, n)                  for (i = (m); i >= (n); i--)
+
+#define SWAP(x,y)                        do {int _tmp; _tmp = (x); (x) = (y); (y) = _tmp;} while(0)
+#define MIN(x, y)                        ((x) <= (y) ? (x) : (y))
+
+#define MAX_CLASS   5001
+
+int credit[MAX_CLASS];
+int size;
+int maxCredit;
+
+int partition(int *arr, int head, int tail)
+{
+	int pivot = arr[tail];
+	int mid = head;
+	int gt;
+
+	FORFROM(gt, head, (tail - 1)) {
+		if (arr[gt] < pivot) {
+			SWAP(arr[mid], arr[gt]);
+			mid++;
+		}
+	}
+	arr[tail] = arr[mid];
+	arr[mid] = pivot;
+	return mid;
+}
+
+void quickSort(int *arr, int head, int tail)
+{
+	if (head >= tail) {
+		return;
+	}
+
+	int mid = partition(arr, head, tail);
+	quickSort(arr, head, mid - 1);
+	quickSort(arr, mid + 1, tail);
+}
+
+
+int main()
+{
+	//freopen("classSchedule.txt", "r", stdin);
+	setbuf(stdout, NULL);
+
+	int T;
+	int test_case;
+	int i, j, num;
+	int res = 0;
+	
+	scanf("%d", &T);
+	for (test_case = 1; test_case <= T; test_case++) {
+		scanf("%d %d", &size, &maxCredit);
+
+		j = 1;
+		FOR(i, size) {
+			scanf("%d", &num);
+			if (num == maxCredit) {
+				res = maxCredit;
+				break;
+			}
+			else if (num < maxCredit) {
+				credit[j++] = num;
+			}
+		}
+		size = j - 1;
+
+		if (res == maxCredit) {
+			printf("Case #%d\n%d\n", test_case, res);
+			continue;
+		}
+
+		quickSort(credit, 1, size);
+
+		int res = 0;
+		
+
+		num = 0;
+		int isLoopAgain = 1;
+		while (isLoopAgain) {
+			isLoopAgain = 0;
+			FORDEC(i, size, 1) {
+				if (credit[i] + num < maxCredit) {
+					num += credit[i];
+					isLoopAgain = 1;
+				}
+			}
+		}
+		int minGap = maxCredit - num;
+		int smallest = credit[1];
+		
+		FORFROM(i, 2, size) {
+			num = maxCredit - credit[i];
+			minGap = MIN(minGap, (num % smallest));
+		}
+		res = maxCredit - minGap;
+		printf("Case #%d\n%d\n", test_case, res);
+	}
+
+	return 0;
+}
